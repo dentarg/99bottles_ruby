@@ -30,4 +30,10 @@ class Bottles
       "99 bottles of beer on the wall.\n"
     end
   end
+
+  def verses(*inputs)
+    inputs.map do |bottles|
+      verse(bottles)
+    end.join("\n")
+  end
 end
