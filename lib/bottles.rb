@@ -31,8 +31,9 @@ class Bottles
     end
   end
 
-  def verses(*inputs)
-    inputs.map do |bottles|
+  def verses(high, low)
+    bottle_counts = (low..high).to_a.reverse
+    bottle_counts.map do |bottles|
       verse(bottles)
     end.join("\n")
   end
